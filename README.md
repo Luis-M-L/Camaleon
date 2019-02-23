@@ -7,7 +7,9 @@ mariadb
 
 1. 
 MariaDB[Camaleon]> CREATE DATABASE Camaleon;
+
 MariaDB[Camaleon]> CREATE USER 'test' IDENTIFIED BY 'test_pass';
+
 MariaDB[Camaleon]> source <PROJECT_DIRECTORY>/database/init;
 
 El usuario y contraseña del usuario debe coincidir con el que indicamos en las propiedades de /Camaleon/database/bbdd.js.
