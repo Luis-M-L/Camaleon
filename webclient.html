@@ -1,0 +1,28 @@
+<!DOCUMENT html>
+<HEAD>
+    <TITLE>
+        La máquina de hacer dinero
+    </TITLE>
+    <META charset="utf-8">
+    <SCRIPT>
+        function pedir(){
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open('GET', 'http://127.0.0.1:8080', true);
+            xmlHttp.send();
+            console.log("Petición enviada");
+
+            xmlHttp.onreadystatechange = function(){
+                if(xmlHttp.status === 200 && xmlHttp.readyState === 4){
+                    console.log("Recibida respuesta");
+                    document.getElementById(respuesta).innerHTML = "Respondido!";
+                }
+            };
+        }
+    </script>
+</HEAD>
+<BODY>
+    <div id="respuesta">
+        
+    </div>
+    <input type="button" onclick="pedir()" value="Dale primo!">
+</BODY>
